@@ -1,0 +1,20 @@
+---
+title: "Phase 2: Model Planning and Building"
+author: "Brendan Allen"
+output:
+  html_document:
+    df_print: paged
+---
+###Coming soon...
+
+
+
+
+
+####[Home](https://ballen2024.github.io/docs/index.html)
+
+####[Phase 1: Discovery and Data Preparation](https://ballen2024.github.io/docs/deliverable1.html)
+
+####[Phase 2: Model Planning and Building](https://ballen2024.github.io/docs/deliverable2.html)
+
+####[Phase 3: Results and Operationalization](https://ballen2024.github.io/docs/deliverable3.html)

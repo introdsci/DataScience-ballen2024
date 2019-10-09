@@ -1,14 +1,57 @@
 ---
-title: "Untitled"
+title: "Phase 1: Discovery and Data Preparation of MLB Data"
 author: "Brendan Allen"
 output:
   html_document:
     df_print: paged
 ---
+####[Home](https://ballen2024.github.io/docs/index.html)
 
-###Phase 1:
+####[Phase 1: Discovery and Data Preparation](https://ballen2024.github.io/docs/deliverable1.html)
 
-```{r}
+####[Phase 2: Model Planning and Building](https://ballen2024.github.io/docs/deliverable2.html)
+
+####[Phase 3: Results and Operationalization](https://ballen2024.github.io/docs/deliverable3.html)
+
+Document any manipulations you make to clean your data and organize it as Tidy Data as best you can prepare it for data analysis and modeling
+Summarize your data using descriptive statistics, along with visualizations (with accompanying interpretations) that help explore what possible insights you might investigate.
+Finally, describe what research questions you hope to explore in later phases, along with potential social & ethical implications of your work. For help identifying and phrasing research questions, see How to Write a Research Question
+
+
+###Getting Started
+First we want to import any necessary libraries we will be using. Our initial dataset `game_logs` includes **171,907 observations** with **161 variables**. Given the size and robustness of this dataset, it is not entirely useful to use all of it. For example, much of the game data from 1871 is not going to be entirely relevant if I want to corroborate with other available datasets, given that the likely won't be data from that year. There are also some missing data points or points labeled **0**. It is tough to tell whether **0** is an accurate representation of that attribute at that game or if it an arbitrary value to indicate that data was not available for it.
+
+For this stage of analysis, I have cleaned up the initial dataset to include only 14 variables, which include:
+
+* `date`
+  + The date of the game formatted in `yyyymdd`.
+* `day`
+  + The day of the week in a three letter abbreviated format. e.g. `Sun` for Sunday.
+* `v_name`
+  + The visiting team name given in a three character code corrsponding to the team's full name. Merging this attribute with a lookup table will be essential.
+* `h_name`
+  + The home team name given in a three character code corrsponding to the team's full name.
+* `park_id`
+  + A five character code corresponding the the city and which park if there are multiple in that city.
+* `attendance`
+  + Double type of the number of people in attendance of the game.
+* `duration`
+  + How long the game lasted in minutes.
+* `v_score`
+  + The number of runs that the visiting team scored.
+* `h_score`
+  + The number of runs that the home team scored.
+* `v_hits`
+  + The number of hits that the visiting team had.
+* `h_hits`
+  + The number of hits that the home team had.
+* `v_homeruns`
+   + The number of homeruns that the visiting team had.
+* `h_homeruns`
+   + The number of homeruns that the home team had.
+
+This was done using `tibble` to create a cleaner and more concise table of our `game_logs` data.
+```{r warning=FALSE}
 suppressMessages(library(tidyr))
 suppressMessages(library(dplyr))
 suppressMessages(library(tidyverse))
@@ -32,3 +75,13 @@ game_data <- tibble(date=raw$date,
 
 
 ```
+
+###Initial Exploration
+
+Distribution of night and day games
+
+Attendance of night vs day games
+
+Average attendance per year
+
+Duration of the game by day of the week
