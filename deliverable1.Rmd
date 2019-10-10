@@ -5,13 +5,13 @@ output:
   html_document:
     df_print: paged
 ---
-####[Home](https://ballen2024.github.io/docs/index.html)
+####[Home](https://ballen2024.github.io/DataScience/index.html)
 
-####[Phase 1: Discovery and Data Preparation](https://ballen2024.github.io/docs/deliverable1.html)
+####[Phase 1: Discovery and Data Preparation](https://ballen2024.github.io/DataScience/deliverable1.html)
 
-####[Phase 2: Model Planning and Building](https://ballen2024.github.io/docs/deliverable2.html)
+####[Phase 2: Model Planning and Building](https://ballen2024.github.io/DataScience/deliverable2.html)
 
-####[Phase 3: Results and Operationalization](https://ballen2024.github.io/docs/deliverable3.html)
+####[Phase 3: Results and Operationalization](https://ballen2024.github.io/DataScience/deliverable3.html)
 
 Document any manipulations you make to clean your data and organize it as Tidy Data as best you can prepare it for data analysis and modeling
 Summarize your data using descriptive statistics, along with visualizations (with accompanying interpretations) that help explore what possible insights you might investigate.
