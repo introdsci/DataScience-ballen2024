@@ -27,9 +27,9 @@ First we want to import any necessary libraries we will be using.
 suppressMessages(library(tidyr))
 suppressMessages(library(dplyr))
 suppressMessages(library(tidyverse))
-suppressMessages(library(lemon))
 suppressMessages(install.packages("devtools"))
 suppressMessages(devtools::install_github("stefanedwards/lemon"))
+suppressMessages(library(lemon))
 suppressMessages(library(scales))
 knit_print.data.frame <- lemon_print
 ```
