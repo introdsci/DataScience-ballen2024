@@ -28,6 +28,8 @@ suppressMessages(library(tidyr))
 suppressMessages(library(dplyr))
 suppressMessages(library(tidyverse))
 suppressMessages(library(lemon))
+suppressMessages(install.packages("devtools"))
+suppressMessages(devtools::install_github("stefanedwards/lemon"))
 suppressMessages(library(scales))
 knit_print.data.frame <- lemon_print
 ```
