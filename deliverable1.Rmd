@@ -50,7 +50,7 @@ The data source [**Retrosheet**](https://www.retrosheet.org/) is a non-profit or
 * __`h_name`__
     + The home team name given in a three character code corrsponding to the team's full name.
 * __`park_id`__
-    + A five character code corresponding the the city and which park if there are multiple in that city.
+    + A five character code corresponding to the city and which park if there are multiple in that city.
 * __`attendance`__
     + Double type of the number of people in attendance of the game.
 * __`duration`__
