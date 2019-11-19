@@ -108,10 +108,13 @@ head(df)
 
 **An interesting finding was that according to our initial set, there is an exactly equal distribution of night and day games**
 
-```{r echo=FALSE}
+```{r, echo=FALSE, render=lemon_print}
 t <- table(game_data$day_night)
 day_night_data <- as.data.frame(t)
-(p <- ggplot(day_night_data, aes(x=Var1,y=Freq)) + geom_bar(stat = "identity", fill="steelblue3") + geom_text(aes(label= paste("Count = ", day_night_data$Freq)), vjust=1.6, color="white", size=4) + labs(x = "Game Time (Day/Night)",y="Number of Games",title="Frequency of Day/Night Games from 1871-2016"))
+colnames(day_night_data) <- c("Game Time", "Number of Games")
+day_night_data$`Game Time` <- c("Day","Night") 
+head(day_night_data)
+p <- ggplot(day_night_data, aes(x=Var1,y=Freq)) + geom_bar(stat = "identity", fill="steelblue3") + geom_text(aes(label= paste("Count = ", day_night_data$Freq)), vjust=1.6, color="white", size=4) + labs(x = "Game Time (Day/Night)",y="Number of Games",title="Frequency of Day/Night Games from 1871-2016")
 ```
 
 **Total attendance by year**
