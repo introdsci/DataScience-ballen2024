@@ -40,7 +40,7 @@ The data source [**Retrosheet**](https://www.retrosheet.org/) is a non-profit or
 **For this stage of analysis, I have cleaned up the initial dataset to include 14 variables, which include:**
 
 * __`date`__
-    + The date of the game formatted in `yyyymdd`.
+    + The date of the game formatted in `yyyymmdd`.
 * __`day`__
     + The day of the week in a three letter abbreviated format. e.g. `Sun` for Sunday.
 * __`day_night`__
