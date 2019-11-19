@@ -425,6 +425,7 @@ game_data &lt;- game_data %&gt;%
 </tbody>
 </table>
 <p><strong>This is a summary of the data, with some key markers of <code>min</code>, <code>mean</code> and <code>max</code> values of each variable</strong>.</p>
+<p>It is worth noting that <code>v_homeruns</code> and <code>h_homeruns</code> indicate a minimum value of <code>-1</code>. It obviously is not possible to hit -1 homeruns, and I couldn’t find any information from Retrosheet on why the value is expressed this way. However, this value only comes up in 23 games in the 1870’s for both the home and visiting team. I consider it okay to omit these games when processing homerun stats.</p>
 <table>
 <thead>
 <tr class="header">

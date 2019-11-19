@@ -100,6 +100,8 @@ df <- summary(game_data[7:14])
 ```
 
 **This is a summary of the data, with some key markers of `min`, `mean` and `max` values of each variable**.
+
+It is worth noting that `v_homeruns` and `h_homeruns` indicate a minimum value of `-1`. It obviously is not possible to hit -1 homeruns, and I couldn't find any information from Retrosheet on why the value is expressed this way. However, this value only comes up in 23 games in the 1870's for both the home and visiting team. I consider it okay to omit these games when processing homerun stats.
 ```{r render=lemon_print, echo=FALSE}
 head(df)
 ```
@@ -114,7 +116,7 @@ day_night_data <- as.data.frame(t)
 colnames(day_night_data) <- c("Game Time", "Number of Games")
 day_night_data$`Game Time` <- c("Day","Night") 
 head(day_night_data)
-p <- ggplot(day_night_data, aes(x=Var1,y=Freq)) + geom_bar(stat = "identity", fill="steelblue3") + geom_text(aes(label= paste("Count = ", day_night_data$Freq)), vjust=1.6, color="white", size=4) + labs(x = "Game Time (Day/Night)",y="Number of Games",title="Frequency of Day/Night Games from 1871-2016")
+# p <- ggplot(day_night_data, aes(x=Var1,y=Freq)) + geom_bar(stat = "identity", fill="steelblue3") + geom_text(aes(label= paste("Count = ", day_night_data$Freq)), vjust=1.6, color="white", size=4) + labs(x = "Game Time (Day/Night)",y="Number of Games",title="Frequency of Day/Night Games from 1871-2016")
 ```
 
 **Total attendance by year**
